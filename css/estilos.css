@@ -156,16 +156,22 @@ Países
 #paises article {
     display: inline-block;
     width: 44.90%;
+    transition: 0.5s;
+    margin-bottom: 10px;
 }
 
 #paises article:nth-of-type(odd) {
-    padding-right: 40px;
+    margin-right: 40px;
 }
 
 #paises article:nth-of-type(even) {
-    padding-left: 40px;
+    margin-left: 40px;
 }
 
+#paises article:hover{
+    outline: 1px solid black;
+    box-shadow: 10px 10px 10px black;
+}
 figure {
     width: 100%;
     margin: 0;
@@ -177,7 +183,7 @@ figure img {
 }
 
 figcaption {
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
 /*
@@ -206,7 +212,7 @@ legend{
     margin-bottom: 1em;
 }
 fieldset{
-    border: 1px solid #484b50;
+    border: 1px solid #888d8b;
 }
 fieldset label {
     font-weight: normal;
@@ -218,11 +224,11 @@ fieldset label {
     font-size: 1.5em;
     margin-bottom: 1em;
     background-color: transparent;
-    border: 1px solid;
+    border: 1px solid #888d8b;
     margin-top: 5px;
 }
 
-[type='radio']:checked + label{
+[type='checkbox']:checked + label{
     background-color: #f8e0b9;
 }
 
