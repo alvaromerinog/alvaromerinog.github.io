@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Source+Sans+Pro:wght@400;700&display=swap');
+
 /*
 General
  */
@@ -31,23 +32,20 @@ header {
 
 #inicio {
     position: absolute;
-    top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    margin: auto;
-    height: 30%;
+    bottom: 100px;
+    margin: 0;
 }
 
-h1 {
+#inicio h1 {
     text-transform: uppercase;
     font-size: 5em;
 
 }
 
-h2 {
+#inicio h2 {
     font-family: 'Merriweather', serif;
-    font-style: italic;
     font-size: 2em;
 }
 
@@ -59,7 +57,6 @@ a div {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    margin-bottom: 100px;
     border-radius: 5px;
 }
 
@@ -74,7 +71,7 @@ Barra de navegacion
 nav {
     position: sticky;
     top: 0;
-    margin-top:-50px;
+    margin-top: -50px;
     margin-left: auto;
     margin-right: auto;
     max-width: 900px;
@@ -86,14 +83,15 @@ nav {
 nav p {
     box-sizing: border-box;
     display: inline-block;
-    padding: 15px 7.5px 0 7.5px;
+    padding: 15px;
     height: 50px;
     margin: 0;
 }
 
-nav p:hover{
-    background-color: #6a7377;
+nav p:hover {
+    background-color: black;
 }
+
 nav a {
     color: white;
     text-transform: uppercase;
@@ -112,7 +110,7 @@ main {
 }
 
 #vuelos, #formulario {
-    padding: 40px;
+    padding: 10px 40px 40px 40px;
 }
 
 article {
@@ -125,9 +123,10 @@ main h1 {
     font-weight: 700;
     text-align: center;
     margin: 0.5em 0;
+    text-transform: uppercase;
 }
 
-main h2, figcaption {
+main em, figcaption em {
     font-size: 1.5em;
     font-family: 'Merriweather', serif;
     font-weight: 300;
@@ -143,6 +142,7 @@ Introducción
 
 #vuelos img {
     width: 100%;
+    margin-bottom: 1em;
 }
 
 /*
@@ -153,37 +153,42 @@ Países
     text-align: center;
 }
 
-#paises article {
-    display: inline-block;
-    width: 44.90%;
-    transition: 0.5s;
-    margin-bottom: 10px;
+@media (max-width: 899px) {
+    #paises article {
+        display: block;
+        width: 100%;
+        transition: 0.5s;
+        margin: 0;
+    }
 }
 
-#paises article:nth-of-type(odd) {
-    margin-right: 40px;
+@media (min-width: 900px) {
+    #paises article {
+        display: inline-block;
+        width: 44.90%;
+        transition: 0.5s;
+        margin-bottom: 10px;
+    }
+
+    #paises article:nth-of-type(odd) {
+        margin-right: 40px;
+    }
+
+    #paises article:nth-of-type(even) {
+        margin-left: 40px;
+    }
 }
 
-#paises article:nth-of-type(even) {
-    margin-left: 40px;
-}
-
-#paises article:hover{
+#paises article:hover {
     outline: 1px solid black;
     box-shadow: 10px 10px 10px black;
 }
+
 figure {
     width: 100%;
     margin: 0;
+    padding-bottom: 10px;
     text-align: center;
-}
-
-figure img {
-    width: 100%;
-}
-
-figcaption {
-    margin: 10px 0;
 }
 
 /*
@@ -191,8 +196,7 @@ Formulario
  */
 
 #formulario {
-    margin: 0;
-    margin-bottom: 300px;
+    margin: 0 0 300px 0;
     background-color: #cad1ce;
 }
 
@@ -208,19 +212,22 @@ label, legend {
     font-weight: bold;
 }
 
-legend{
-    margin-bottom: 1em;
-}
-fieldset{
+fieldset {
+    box-sizing: border-box;
+    width: 100%;
     border: 1px solid #888d8b;
-}
-fieldset label {
-    font-weight: normal;
+    margin: 0;
 }
 
+legend {
+    margin-bottom: 1em;
+}
+
+
 [type='text'] {
+    box-sizing: border-box;
     width: 100%;
-    padding: 0.3em 0.3em 1em 0.3em;
+    padding: 0.3em;
     font-size: 1.5em;
     margin-bottom: 1em;
     background-color: transparent;
@@ -228,20 +235,21 @@ fieldset label {
     margin-top: 5px;
 }
 
-[type='checkbox']:checked + label{
+[type='checkbox']:checked + label {
     background-color: #f8e0b9;
 }
 
 button {
+    width: 45%;
     color: #484b50;
     text-align: center;
-    margin-top: 2em;
+    font-weight: bold;
     text-transform: uppercase;
-    padding: 1em;
-    background-color: transparent;
     outline: transparent;
     border: 1px solid #484b50;
-    width: 45%;
+    margin-top: 2em;
+    padding: 1em;
+    background-color: transparent;
 }
 
 button:hover {
